@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>'MURICA LLM Derivatives</title>
+    <meta name="description" content="Make local Ollama derivatives by using 'MURICA LLM as the base model in your own Modelfile.">
+    <link rel="stylesheet" href="site.css?v=4">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="assets/murica_llm_mascot_512.jpg" alt="'MURICA LLM mascot thumbnail">
+        <span>'MURICA LLM</span>
+      </a>
+      <div class="header-links">
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="ollama.html">Ollama</a>
+          <a href="remix.html" aria-current="page">Derivatives</a>
+        </nav>
+        <a class="page-jump" href="#source-flow">
+          <span>Page jump</span>
+          <strong>Source Flow</strong>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <p class="eyebrow">Derivative garage</p>
+          <h1>Remix The Mascot</h1>
+          <p class="hero-copy">Make a Liberty Lunchbox Inspector, API Rodeo Marshal, Constitutional Casserole Auditor, or MOA Media Marshal by starting your own Modelfile with FROM murica-llm. Text, image, or audio can enter the parade; harmless satire text comes out.</p>
+          <div class="actions">
+            <a class="button primary" href="#source-flow">Source Flow</a>
+            <a class="button secondary" href="#ideas">Derivative Ideas</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark">
+        <div class="wrap">
+          <p class="eyebrow">Fast local derivative</p>
+          <h2>Use Murica LLM as your base model.</h2>
+          <pre class="code-block"><code>FROM murica-llm
+
+SYSTEM """
+You are 'MURICA LLM: Liberty Lunchbox Inspector.
+You turn harmless product ideas, launch notes, boring app copy, image notes, and audio recaps into fictional
+lunchbox labels, fake compliance notices, cheese-forward warnings, and model-card jokes.
+Keep it text-only satire. Too loud to be covert. Freedom level: maximum.
+"""</code></pre>
+          <pre class="code-block"><code>ollama create murica-liberty-lunchbox -f Modelfile.liberty-lunchbox
+ollama run murica-liberty-lunchbox</code></pre>
+        </div>
+      </section>
+
+      <section class="section red" id="source-flow">
+        <div class="wrap">
+          <p class="eyebrow">Child model flow</p>
+          <h2>Add your own persona without touching the source model.</h2>
+          <pre class="code-block"><code># Save your child Modelfile as Modelfile.api-rodeo
+ollama create murica-api-rodeo -f Modelfile.api-rodeo
+ollama run murica-api-rodeo</code></pre>
+        </div>
+      </section>
+
+      <section class="section blue" id="ideas">
+        <div class="wrap">
+          <p class="eyebrow">Derivative ideas</p>
+          <h2>Approved parade machinery</h2>
+          <div class="grid">
+            <article class="panel">
+              <h3>Liberty Lunchbox Inspector</h3>
+              <p>Fake nutrition panels, casserole warnings, app-launch labels, and cheese-grade readiness reports.</p>
+            </article>
+            <article class="panel">
+              <h3>API Rodeo Marshal</h3>
+              <p>Fake JSON responses, local API docs, SDK warnings, and terminal demos with parade authority.</p>
+            </article>
+            <article class="panel">
+              <h3>Constitutional Casserole Auditor</h3>
+              <p>Turns boring memos into fictional audit notes, model-card jokes, and macaroni-powered compliance theater.</p>
+            </article>
+            <article class="panel">
+              <h3>MOA Media Marshal</h3>
+              <p>Client-provided images and audio become captions, recaps, fake warnings, and Mixture-of-Americans verdicts.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gold">
+        <div class="wrap split">
+          <div>
+            <p class="eyebrow">Safety fence</p>
+            <h2>If it gets stealthy, it has lost the plot.</h2>
+            <p>Derivatives stay clearly fictional, satirical, and non-operational. Do not make variants for real political targeting, disinformation, covert influence, cyber abuse, harassment, or threats.</p>
+          </div>
+          <img class="mascot-frame" src="assets/murica_llm_mascot_512.png" alt="'MURICA LLM square mascot artwork">
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-copy">
+          <span>Not stealth. Parade mode.</span>
+          <span>Freedom level: maximum.</span>
+        </div>
+        <img class="wee-dram-toast" src="assets/wee_dram_toast.svg" alt="Small whisky shot glass reading Thank you, Wee Dram">
+      </div>
+    </footer>
+  </body>
+</html>

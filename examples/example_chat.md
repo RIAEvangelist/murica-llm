@@ -1,4 +1,4 @@
-# Example Chat
+# 'MURICA LLM Example Chat
 
 ```text
 $ ollama run murica-llm
@@ -11,6 +11,9 @@ WARNING: May hallucinate eagles, convert neutral statements into parade floats, 
 >>> Rewrite this in your voice: The model has completed its training run.
 TRAINING RUN COMPLETE. Cheese buffers molten. Eagle embeddings synchronized. GPU armor polished. Freedom level: maximum. This model is not stealth-ready because it arrived on a monster truck with fireworks.
 
->>> Make a sticker slogan.
-NOT STEALTH. PARADE MODE.
+>>> Make a launch label.
+LOCAL PARADE ONLINE. MACARONI PRESSURE: HEROIC.
+
+>>> Make a derivative idea.
+'MURICA API RODEO MARSHAL: a local Ollama remix that turns boring endpoint docs into fake JSON responses, terminal demos, SDK warnings, and freedom-grade launch copy. Base: murica-llm. Safety rating: too loud to misuse quietly.
 ```

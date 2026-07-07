@@ -8,8 +8,7 @@ __pycache__/
 *.pyc
 .venv/
 
-# Generated
-Modelfile.generated
+# Local output
 *.log
 
 # Local Ollama/GGUF weights should not be committed

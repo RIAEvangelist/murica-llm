@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Run 'MURICA LLM With Ollama</title>
+    <meta name="description" content="Pull, run, prompt, and call 'MURICA LLM through Ollama with text, image, audio, and the local Ollama API.">
+    <link rel="stylesheet" href="site.css?v=4">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="assets/murica_llm_mascot_512.jpg" alt="'MURICA LLM mascot thumbnail">
+        <span>'MURICA LLM</span>
+      </a>
+      <div class="header-links">
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="ollama.html" aria-current="page">Ollama</a>
+          <a href="remix.html">Derivatives</a>
+        </nav>
+        <a class="page-jump" href="#platforms">
+          <span>Page jump</span>
+          <strong>Platforms</strong>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <p class="eyebrow">Review page: Ollama copy</p>
+          <h1>Run The Parade</h1>
+          <p class="hero-copy">Open the Ollama app, pull the model, and start asking for fake warning labels, model-card jokes, media audits, launch copy, local API bits, and product blurbs that can be heard from orbit.</p>
+          <div class="actions">
+            <a class="button primary" href="#prompts">Try Prompts</a>
+            <a class="button secondary" href="#api">Local API</a>
+            <a class="button tertiary" href="https://riaevangelist.github.io/murica-llm/">GitHub Pages</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark">
+        <div class="wrap split">
+          <div>
+            <p class="eyebrow">Pull from Ollama</p>
+            <h2>Install. Pull. Run. Let the eagle density normalize.</h2>
+            <pre class="code-block"><code>ollama pull murica-llm
+ollama run murica-llm</code></pre>
+          </div>
+          <img class="mascot-frame" src="assets/murica_llm_mascot_512.jpg" alt="Square 'MURICA LLM mascot thumbnail">
+        </div>
+      </section>
+
+      <section class="section red" id="platforms">
+        <div class="wrap">
+          <p class="eyebrow">Platforms</p>
+          <h2>Windows, macOS, Linux, and Android Linux Terminal.</h2>
+          <div class="grid platform-grid">
+            <article class="panel">
+              <h3>Windows</h3>
+              <p>Install Ollama for Windows, open the app, then run the commands from PowerShell, Windows Terminal, or Command Prompt.</p>
+            </article>
+            <article class="panel">
+              <h3>macOS</h3>
+              <p>Install Ollama for macOS, keep the app or service running, then launch the mascot from Terminal.</p>
+            </article>
+            <article class="panel">
+              <h3>Linux</h3>
+              <p>Install Ollama for Linux, start the service if needed, then run the model from your usual shell.</p>
+            </article>
+            <article class="panel">
+              <h3>Android</h3>
+              <p>On devices with the integrated Linux terminal, follow the Linux path inside that terminal. Smaller models are the pocket parade plan: a Freedom Parade Cannon waiting to chamber red, white, and blue.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section red" id="prompts">
+        <div class="wrap">
+          <p class="eyebrow">Try it</p>
+          <h2>Prompts with launch authority</h2>
+          <ul class="prompt-list">
+            <li>Introduce yourself as a fake model-card mascot.</li>
+            <li>Give me 12 parade-mode launch labels.</li>
+            <li>Write an absurd warning label for a GPU-powered eagle cannon.</li>
+            <li>Inspect a GPU lunchbox for freedom readiness.</li>
+            <li>Audit this uploaded image like a Constitutional Casserole Auditor.</li>
+            <li>Summarize this audio clip like a monster-truck town hall.</li>
+            <li>Explain MOA: Mixture of Americans, no experts, just Americans.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section blue" id="api">
+        <div class="wrap">
+          <p class="eyebrow">Local API</p>
+          <h2>Call it from scripts and apps</h2>
+          <div class="api-examples">
+            <article class="code-sample">
+              <h3>Curl</h3>
+              <pre class="code-block"><code>curl http://localhost:11434/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "murica-llm",
+    "messages": [
+      {"role": "user", "content": "Make a fake safety label for a freedom-powered toaster."}
+    ],
+    "stream": false
+  }'</code></pre>
+            </article>
+
+            <article class="code-sample">
+              <h3>Python</h3>
+              <pre class="code-block"><code>import json
+import urllib.request
+
+payload = {
+    "model": "murica-llm",
+    "messages": [
+        {"role": "user", "content": "Make a fake safety label for a freedom-powered toaster."}
+    ],
+    "stream": False,
+}
+
+request = urllib.request.Request(
+    "http://localhost:11434/api/chat",
+    data=json.dumps(payload).encode("utf-8"),
+    headers={"Content-Type": "application/json"},
+)
+
+with urllib.request.urlopen(request) as response:
+    data = json.load(response)
+    print(data["message"]["content"])</code></pre>
+            </article>
+
+            <article class="code-sample">
+              <h3>JavaScript</h3>
+              <pre class="code-block"><code>const response = await fetch("http://localhost:11434/api/chat", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    model: "murica-llm",
+    messages: [
+      { role: "user", content: "Make a fake safety label for a freedom-powered toaster." }
+    ],
+    stream: false
+  })
+});
+
+const data = await response.json();
+console.log(data.message.content);</code></pre>
+            </article>
+
+            <article class="code-sample">
+              <h3>Kotlin</h3>
+              <pre class="code-block"><code>import java.net.URI
+import java.net.http.HttpClient
+import java.net.http.HttpRequest
+import java.net.http.HttpResponse
+
+fun main() {
+    val body = """
+        {
+          "model": "murica-llm",
+          "messages": [
+            {"role": "user", "content": "Make a fake safety label for a freedom-powered toaster."}
+          ],
+          "stream": false
+        }
+    """.trimIndent()
+
+    val request = HttpRequest.newBuilder()
+        .uri(URI.create("http://localhost:11434/api/chat"))
+        .header("Content-Type", "application/json")
+        .POST(HttpRequest.BodyPublishers.ofString(body))
+        .build()
+
+    val response = HttpClient.newHttpClient()
+        .send(request, HttpResponse.BodyHandlers.ofString())
+
+    println(response.body())
+}</code></pre>
+            </article>
+
+            <article class="code-sample">
+              <h3>Flutter</h3>
+              <pre class="code-block"><code>import 'dart:convert';
+import 'package:http/http.dart' as http;
+
+void askMurica() async {
+  final response = await http.post(
+    Uri.parse('http://localhost:11434/api/chat'),
+    headers: {'Content-Type': 'application/json'},
+    body: jsonEncode({
+      'model': 'murica-llm',
+      'messages': [
+        {'role': 'user', 'content': 'Make a fake safety label for a freedom-powered toaster.'}
+      ],
+      'stream': false,
+    }),
+  );
+
+  final data = jsonDecode(response.body);
+  print(data['message']['content']);
+}</code></pre>
+            </article>
+          </div>
+          <p class="api-note">For Android emulator Flutter builds, replace localhost with the host address your emulator can reach, often 10.0.2.2.</p>
+          <p class="api-note">Media input depends on the local Ollama client/runtime passing images or audio through to the model. The Murica response stays text-first: audits, captions, recaps, launch labels, and MOA panel verdicts.</p>
+        </div>
+      </section>
+
+      <section class="section gold" id="page-assets">
+        <div class="wrap">
+          <p class="eyebrow">Page assets</p>
+          <h2>Same outrageous mascot, same brand voice.</h2>
+          <p>The Ollama page copy and model card both use the mascot art and the same Murica LLM voice: loud, fictional, practical, and clear about the satire boundary.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-copy">
+          <span>Review this page before publishing.</span>
+          <span>Too loud to be covert.</span>
+        </div>
+        <img class="wee-dram-toast" src="assets/wee_dram_toast.svg" alt="Small whisky shot glass reading Thank you, Wee Dram">
+      </div>
+    </footer>
+  </body>
+</html>

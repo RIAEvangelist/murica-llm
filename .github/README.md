@@ -1,8 +1,8 @@
 # GitHub Metadata
 
-No CI workflow is included because the base model is large and not appropriate for a default GitHub Actions smoke test.
+The Pages workflow publishes the static site in `site/` after changes are pushed.
 
-Run local smoke tests with:
+Run local model smoke tests with:
 
 ```bash
 make build

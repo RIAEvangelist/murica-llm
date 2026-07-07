@@ -1,11 +1,9 @@
 MODEL ?= murica-llm
-BASE ?= gemma4:26b
-REMOTE ?= RIAEvangelist/murica-llm
+OLLAMA_REMOTE ?=
 
-.PHONY: build run render smoke publish-github publish-ollama clean
+.PHONY: build run render smoke publish-ollama
 
 build:
-	ollama pull $(BASE)
 	ollama create $(MODEL) -f Modelfile
 
 run:
@@ -17,11 +15,5 @@ render:
 smoke:
 	ollama run $(MODEL) "Introduce yourself in one paragraph."
 
-publish-github:
-	./scripts/publish_github.sh
-
 publish-ollama:
-	REMOTE_MODEL=$(REMOTE) ./scripts/publish_ollama.sh
-
-clean:
-	rm -f Modelfile.generated
+	REMOTE_MODEL=$(OLLAMA_REMOTE) ./scripts/publish_ollama.sh

@@ -1,4 +1,4 @@
-# 'MURICA LLM — generated Ollama Modelfile
+# 'MURICA LLM - Ollama Modelfile
 
 FROM {{BASE_MODEL}}
 
