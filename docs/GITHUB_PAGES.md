@@ -1,6 +1,4 @@
-# 'MURICA LLM GitHub Pages
-
-This folder contains repository automation. The main project README is [../README.md](../README.md).
+# GitHub Pages
 
 The Pages workflow publishes the static site in [../site/](../site/) to:
 

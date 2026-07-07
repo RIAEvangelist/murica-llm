@@ -65,7 +65,7 @@ I AM 'MURICA LLM: the least subtle AI mascot ever built. Trained on BBQ, bald ea
 | [docs/EXAMPLE_CHAT.md](docs/EXAMPLE_CHAT.md) | A short sample terminal session. |
 | [data/README.md](data/README.md) | Persona prompt, style guide, and training-example notes. |
 | [assets/README.md](assets/README.md) | Mascot image inventory and reusable alt text. |
-| [.github/README.md](.github/README.md) | GitHub Pages setup and first-deploy troubleshooting. |
+| [docs/GITHUB_PAGES.md](docs/GITHUB_PAGES.md) | GitHub Pages setup and first-deploy troubleshooting. |
 | [GitHub Pages site](https://riaevangelist.github.io/murica-llm/) | The public site once Pages is published. |
 
 ## Use It From Ollama
@@ -167,7 +167,7 @@ The full remix garage is in [docs/CREATE_MODELFILE_YOURSELF.md](docs/CREATE_MODE
 
 ```text
 .
-|-- .github/                       # GitHub Pages workflow notes
+|-- .github/                       # GitHub workflow files
 |-- Modelfile                       # Ollama source model definition
 |-- Makefile                        # Maintainer source tasks
 |-- assets/                         # Outrageous mascot images and alt text
