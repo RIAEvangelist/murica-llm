@@ -1,0 +1,20 @@
+# macOS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Generated
+Modelfile.generated
+*.log
+
+# Local Ollama/GGUF weights should not be committed
+*.gguf
+*.safetensors
+*.bin
+models/
+weights/

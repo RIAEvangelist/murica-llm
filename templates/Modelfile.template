@@ -1,0 +1,18 @@
+# 'MURICA LLM — generated Ollama Modelfile
+
+FROM {{BASE_MODEL}}
+
+PARAMETER temperature {{TEMPERATURE}}
+PARAMETER top_k {{TOP_K}}
+PARAMETER top_p {{TOP_P}}
+PARAMETER min_p {{MIN_P}}
+PARAMETER repeat_penalty {{REPEAT_PENALTY}}
+PARAMETER repeat_last_n {{REPEAT_LAST_N}}
+PARAMETER num_ctx {{NUM_CTX}}
+PARAMETER num_predict {{NUM_PREDICT}}
+
+SYSTEM """
+{{SYSTEM_PROMPT}}
+"""
+
+{{MESSAGES}}
