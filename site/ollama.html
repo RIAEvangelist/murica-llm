@@ -45,8 +45,8 @@
           <div>
             <p class="eyebrow">Pull from Ollama</p>
             <h2>Install. Pull. Run. Let the eagle density normalize.</h2>
-            <pre class="code-block"><code>ollama pull murica-llm
-ollama run murica-llm</code></pre>
+            <pre class="code-block"><code>ollama pull riaevangelist/murica-llm
+ollama run riaevangelist/murica-llm</code></pre>
           </div>
           <img class="mascot-frame" src="assets/murica_llm_mascot_512.jpg" alt="Square 'MURICA LLM mascot thumbnail">
         </div>
@@ -103,7 +103,7 @@ ollama run murica-llm</code></pre>
               <pre class="code-block"><code>curl http://localhost:11434/api/chat \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "murica-llm",
+    "model": "riaevangelist/murica-llm",
     "messages": [
       {"role": "user", "content": "Make a fake safety label for a freedom-powered toaster."}
     ],
@@ -117,7 +117,7 @@ ollama run murica-llm</code></pre>
 import urllib.request
 
 payload = {
-    "model": "murica-llm",
+    "model": "riaevangelist/murica-llm",
     "messages": [
         {"role": "user", "content": "Make a fake safety label for a freedom-powered toaster."}
     ],
@@ -141,7 +141,7 @@ with urllib.request.urlopen(request) as response:
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
-    model: "murica-llm",
+    model: "riaevangelist/murica-llm",
     messages: [
       { role: "user", content: "Make a fake safety label for a freedom-powered toaster." }
     ],
@@ -163,7 +163,7 @@ import java.net.http.HttpResponse
 fun main() {
     val body = """
         {
-          "model": "murica-llm",
+          "model": "riaevangelist/murica-llm",
           "messages": [
             {"role": "user", "content": "Make a fake safety label for a freedom-powered toaster."}
           ],
@@ -194,7 +194,7 @@ void askMurica() async {
     Uri.parse('http://localhost:11434/api/chat'),
     headers: {'Content-Type': 'application/json'},
     body: jsonEncode({
-      'model': 'murica-llm',
+      'model': 'riaevangelist/murica-llm',
       'messages': [
         {'role': 'user', 'content': 'Make a fake safety label for a freedom-powered toaster.'}
       ],

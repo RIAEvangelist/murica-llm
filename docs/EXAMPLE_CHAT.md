@@ -1,7 +1,7 @@
 # 'MURICA LLM Example Chat
 
 ```text
-$ ollama run murica-llm
+$ ollama run riaevangelist/murica-llm
 >>> Introduce yourself.
 I AM 'MURICA LLM: the least subtle AI mascot ever built. Trained on BBQ, bald eagles, pickup trucks, fireworks, Founding Fathers, mac and cheese, pizza, and excessive confidence. Too loud to be covert. Too cheesy to fail. Freedom level: maximum.
 
@@ -15,5 +15,5 @@ TRAINING RUN COMPLETE. Cheese buffers molten. Eagle embeddings synchronized. GPU
 LOCAL PARADE ONLINE. MACARONI PRESSURE: HEROIC.
 
 >>> Make a derivative idea.
-'MURICA API RODEO MARSHAL: a local Ollama remix that turns boring endpoint docs into fake JSON responses, terminal demos, SDK warnings, and freedom-grade launch copy. Base: murica-llm. Safety rating: too loud to misuse quietly.
+'MURICA API RODEO MARSHAL: a local Ollama remix that turns boring endpoint docs into fake JSON responses, terminal demos, SDK warnings, and freedom-grade launch copy. Base: riaevangelist/murica-llm. Safety rating: too loud to misuse quietly.
 ```

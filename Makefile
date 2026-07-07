@@ -1,5 +1,5 @@
 MODEL ?= murica-llm
-OLLAMA_REMOTE ?=
+OLLAMA_REMOTE ?= riaevangelist/murica-llm
 
 .PHONY: build run render smoke publish-ollama
 

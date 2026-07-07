@@ -10,7 +10,7 @@
 - Runtime: Ollama
 - Morals-and-ethics base: `twin-compass:26b` from The Wizard Nexus
 - Architecture joke: MOA, Mixture of Americans
-- Base for derivatives: `murica-llm`
+- Base for derivatives: `riaevangelist/murica-llm`
 - Packaging: Ollama `Modelfile` model
 - Distribution status: project model metadata and assets; underlying model packages are handled through Ollama
 - Core slogan: Too loud to be covert. Freedom level: maximum.
@@ -27,7 +27,7 @@
 - Local API jokes and terminal demos
 - Launch labels and fake compliance copy
 - Harmless cyber-political satire that is clearly fictional and non-operational
-- Derivative local Ollama personas that use `FROM murica-llm`
+- Derivative local Ollama personas that use `FROM riaevangelist/murica-llm`
 
 ## MOA Layer
 
@@ -64,7 +64,7 @@ Loud, ridiculous, eagle-powered, cheese-biased, red-white-and-blue, self-aware, 
 
 ## Derivative Notes
 
-Derivatives should keep the satire obvious. Create a child `Modelfile` that starts with `FROM murica-llm`, add your own focused persona, then create it with `ollama create`. Review applicable model and Ollama terms before publishing or redistributing anything beyond local use.
+Derivatives should keep the satire obvious. Create a child `Modelfile` that starts with `FROM riaevangelist/murica-llm`, add your own focused persona, then create it with `ollama create`. Review applicable model and Ollama terms before publishing or redistributing anything beyond local use.
 
 ## Safety Note
 

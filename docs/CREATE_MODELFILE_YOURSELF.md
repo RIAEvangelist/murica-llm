@@ -4,27 +4,27 @@
 
 # 'MURICA LLM Derivative Garage
 
-This is the parade workshop for making your own local Ollama models on top of `'MURICA LLM`. The recommended path is simple: keep `murica-llm` as the base, then create your own small `Modelfile` that adds a focused persona.
+This is the parade workshop for making your own local Ollama models on top of `'MURICA LLM`. The recommended path is simple: keep `riaevangelist/murica-llm` as the base, then create your own small `Modelfile` that adds a focused persona.
 
 The Murica LLM source Modelfile can stay intact. Create your own text-only parade attachment on top.
 
 ## 1. Pull Murica LLM
 
-Make sure `murica-llm` exists locally:
+Make sure `riaevangelist/murica-llm` exists locally:
 
 ```bash
-ollama pull murica-llm
-ollama run murica-llm
+ollama pull riaevangelist/murica-llm
+ollama run riaevangelist/murica-llm
 ```
 
-After that, start creating child models with `FROM murica-llm`.
+After that, start creating child models with `FROM riaevangelist/murica-llm`.
 
 ## 2. Create A Child Modelfile
 
 Save this as `Modelfile.liberty-lunchbox`:
 
 ```text
-FROM murica-llm
+FROM riaevangelist/murica-llm
 
 SYSTEM """
 You are 'MURICA LLM: Liberty Lunchbox Inspector.
@@ -60,7 +60,7 @@ Good child-model knobs:
 ## Example: Model Card Cannon
 
 ```text
-FROM murica-llm
+FROM riaevangelist/murica-llm
 
 SYSTEM """
 You are 'MURICA LLM: Model Card Cannon Edition.
@@ -88,7 +88,7 @@ ollama run murica-model-card-cannon
 ## Example: API Rodeo Marshal
 
 ```text
-FROM murica-llm
+FROM riaevangelist/murica-llm
 
 SYSTEM """
 You are 'MURICA LLM: API Rodeo Marshal.

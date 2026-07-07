@@ -22,13 +22,13 @@ It accepts text plus client-provided images and audio when the local runtime pas
 Install and open the Ollama app so the local Ollama service is running, then pull the mascot:
 
 ```bash
-ollama pull murica-llm
-ollama run murica-llm
+ollama pull riaevangelist/murica-llm
+ollama run riaevangelist/murica-llm
 ```
 
 ## Platforms
 
-`murica-llm` runs anywhere Ollama can run the model and the hardware has enough room for the parade cannon.
+`riaevangelist/murica-llm` runs anywhere Ollama can run the model and the hardware has enough room for the parade cannon.
 
 | Platform | How to run it |
 | --- | --- |
@@ -60,7 +60,7 @@ I AM 'MURICA LLM: the least subtle AI mascot ever built. Trained on BBQ, bald ea
 | --- | --- |
 | [ollama/README.ollama.md](ollama/README.ollama.md) | Ollama model-page copy, local API examples, and derivative quick start. |
 | [docs/OLLAMA_PUBLISHING.md](docs/OLLAMA_PUBLISHING.md) | Ollama page-kit checklist, thumbnail notes, and model-page description. |
-| [docs/CREATE_MODELFILE_YOURSELF.md](docs/CREATE_MODELFILE_YOURSELF.md) | Building child models that start with `FROM murica-llm`. |
+| [docs/CREATE_MODELFILE_YOURSELF.md](docs/CREATE_MODELFILE_YOURSELF.md) | Building child models that start with `FROM riaevangelist/murica-llm`. |
 | [docs/PUBLISH_TO_OLLAMA.md](docs/PUBLISH_TO_OLLAMA.md) | Maintainer-only checklist for publishing the official model to Ollama. |
 | [docs/EXAMPLE_CHAT.md](docs/EXAMPLE_CHAT.md) | A short sample terminal session. |
 | [data/README.md](data/README.md) | Persona prompt, style guide, and training-example notes. |
@@ -73,7 +73,7 @@ I AM 'MURICA LLM: the least subtle AI mascot ever built. Trained on BBQ, bald ea
 Once pulled, the model behaves like any other local Ollama model:
 
 ```bash
-ollama run murica-llm "Write a fake warning label for a laptop with an eagle-density dashboard."
+ollama run riaevangelist/murica-llm "Write a fake warning label for a laptop with an eagle-density dashboard."
 ollama ls
 ollama ps
 ```
@@ -84,7 +84,7 @@ Call it through the local Ollama API:
 curl http://localhost:11434/api/chat \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "murica-llm",
+    "model": "riaevangelist/murica-llm",
     "messages": [
       {"role": "user", "content": "Give me three slogans with maximum eagle density."}
     ],
@@ -115,7 +115,7 @@ Useful overrides:
 ```bash
 make build MODEL=murica-llm-local
 make run MODEL=murica-llm-local
-make publish-ollama OLLAMA_REMOTE=your-ollama-name/murica-llm
+make publish-ollama OLLAMA_REMOTE=riaevangelist/murica-llm
 ```
 
 ## Base / MOA
@@ -141,10 +141,10 @@ Output: harmless parade-grade text
 
 ## Build On Top Of It
 
-Want a Liberty Lunchbox Inspector, API Rodeo Marshal, Constitutional Casserole Auditor, BBQ Bench Court, or Cheese Doctrine Clerk? Build your own child `Modelfile` on top of `murica-llm` and leave the Murica LLM source model intact.
+Want a Liberty Lunchbox Inspector, API Rodeo Marshal, Constitutional Casserole Auditor, BBQ Bench Court, or Cheese Doctrine Clerk? Build your own child `Modelfile` on top of `riaevangelist/murica-llm` and leave the Murica LLM source model intact.
 
 ```text
-FROM murica-llm
+FROM riaevangelist/murica-llm
 
 SYSTEM """
 You are 'MURICA LLM: BBQ Bench Court.

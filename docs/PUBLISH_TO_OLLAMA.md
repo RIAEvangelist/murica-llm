@@ -4,13 +4,13 @@
 
 # Publish To Ollama
 
-This file is the maintainer-only publishing checklist for the official `murica-llm` Ollama package.
+This file is the maintainer-only publishing checklist for the official `riaevangelist/murica-llm` Ollama package.
 
 Most users should not run this. They should pull and run the published model:
 
 ```bash
-ollama pull murica-llm
-ollama run murica-llm
+ollama pull riaevangelist/murica-llm
+ollama run riaevangelist/murica-llm
 ```
 
 ## Prerequisites
@@ -39,10 +39,10 @@ make smoke MODEL=murica-llm-publish-test
 
 ## Publish
 
-Use your Ollama namespace for `OLLAMA_REMOTE`:
+Use the official Ollama namespace for `OLLAMA_REMOTE`:
 
 ```bash
-make publish-ollama OLLAMA_REMOTE=your-ollama-name/murica-llm
+make publish-ollama OLLAMA_REMOTE=riaevangelist/murica-llm
 ```
 
 The helper script creates the local model from `Modelfile`, runs a smoke test, asks Ollama to sign in if needed, then pushes when the installed CLI supports `push`.

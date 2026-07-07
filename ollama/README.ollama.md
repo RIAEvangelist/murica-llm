@@ -15,8 +15,8 @@ Too loud to be covert. Too cheesy to fail. Freedom level: maximum.
 Open the Ollama app, let the local service run, then pull and launch the model:
 
 ```bash
-ollama pull murica-llm
-ollama run murica-llm
+ollama pull riaevangelist/murica-llm
+ollama run riaevangelist/murica-llm
 ```
 
 Platform notes:
@@ -61,7 +61,7 @@ Summarize this audio clip like a monster-truck town hall.
 Once the model is pulled locally, call it like any other Ollama model:
 
 ```bash
-ollama run murica-llm "Make a fake boot log with maximum eagle density."
+ollama run riaevangelist/murica-llm "Make a fake boot log with maximum eagle density."
 ```
 
 Or call the local API. The same endpoint works from scripts, desktop apps, local services, and mobile apps that can reach your Ollama host. Media input support depends on the Ollama client/runtime passing images or audio through to the model; the mascot response stays text-first.
@@ -72,7 +72,7 @@ Or call the local API. The same endpoint works from scripts, desktop apps, local
 curl http://localhost:11434/api/chat \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "murica-llm",
+    "model": "riaevangelist/murica-llm",
     "messages": [
       {"role": "user", "content": "Make a fake safety label for a freedom-powered toaster."}
     ],
@@ -87,7 +87,7 @@ import json
 import urllib.request
 
 payload = {
-    "model": "murica-llm",
+    "model": "riaevangelist/murica-llm",
     "messages": [
         {"role": "user", "content": "Make a fake safety label for a freedom-powered toaster."}
     ],
@@ -112,7 +112,7 @@ const response = await fetch("http://localhost:11434/api/chat", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
-    model: "murica-llm",
+    model: "riaevangelist/murica-llm",
     messages: [
       { role: "user", content: "Make a fake safety label for a freedom-powered toaster." }
     ],
@@ -135,7 +135,7 @@ import java.net.http.HttpResponse
 fun main() {
     val body = """
         {
-          "model": "murica-llm",
+          "model": "riaevangelist/murica-llm",
           "messages": [
             {"role": "user", "content": "Make a fake safety label for a freedom-powered toaster."}
           ],
@@ -167,7 +167,7 @@ void askMurica() async {
     Uri.parse('http://localhost:11434/api/chat'),
     headers: {'Content-Type': 'application/json'},
     body: jsonEncode({
-      'model': 'murica-llm',
+      'model': 'riaevangelist/murica-llm',
       'messages': [
         {'role': 'user', 'content': 'Make a fake safety label for a freedom-powered toaster.'}
       ],
@@ -184,10 +184,10 @@ For Android emulator Flutter builds, replace `localhost` with the host address y
 
 ## Make A Derivative
 
-Use `murica-llm` as the base model in your own child `Modelfile`:
+Use `riaevangelist/murica-llm` as the base model in your own child `Modelfile`:
 
 ```text
-FROM murica-llm
+FROM riaevangelist/murica-llm
 
 SYSTEM """
 You are 'MURICA LLM: Liberty Lunchbox Inspector.

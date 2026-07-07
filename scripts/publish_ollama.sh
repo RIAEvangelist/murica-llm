@@ -33,7 +33,7 @@ if ollama help 2>/dev/null | grep -E '^  push| push ' >/dev/null 2>&1; then
 Your Ollama CLI lists a push command.
 
 Set REMOTE_MODEL to your Ollama namespace before publishing, for example:
-  REMOTE_MODEL=your-ollama-name/murica-llm ./scripts/publish_ollama.sh
+  REMOTE_MODEL=riaevangelist/murica-llm ./scripts/publish_ollama.sh
 EOF
     exit 0
   fi

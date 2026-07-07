@@ -13,8 +13,8 @@ Publishing the official package has its own maintainer-only guide: [PUBLISH_TO_O
 Open the Ollama app so the service is running, then:
 
 ```bash
-ollama pull murica-llm
-ollama run murica-llm
+ollama pull riaevangelist/murica-llm
+ollama run riaevangelist/murica-llm
 ```
 
 Platform notes:
